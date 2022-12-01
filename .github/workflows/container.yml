@@ -20,11 +20,16 @@ jobs:
           entrypoint: /usr/local/bin/node
           args: -v
       - uses: actions/checkout@v1    
-      - name: Run a script 
-        uses: docker://node:16-alpine3.15
-        with: 
-          entrypoint: ./script.sh
-          args: "Some string"    
+      #- name: Run a script 
+      #  uses: docker://node:16-alpine3.15
+      #  with: 
+      #    entrypoint: ./script.sh
+      #    args: "Some string"  
+      #- name: send a slack message
+      #  uses: docker://technosophos/slack-notify 
+      #  env: 
+      #    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
+      #    SLACK_MESSAGE: "Hello Slack"
   node-docker: 
     runs-on: ubuntu-latest
     services: #container: 
